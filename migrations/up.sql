@@ -1,0 +1,10 @@
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+
+CREATE TABLE 
+  IF NOT EXISTS product (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR NOT NULL,
+    stock FLOAT NOT NULL,
+    price INTEGER,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+)
